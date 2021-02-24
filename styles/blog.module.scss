@@ -1,0 +1,39 @@
+.posts__date {
+    display:block;
+    margin-top:-5px;
+}
+.posts__post {
+    margin-bottom:20px;
+    list-style:none;
+    padding:5px;
+
+    background: #f4f1de;
+    border: 1px solid #c6d8d3;
+    border-radius: 3px;
+
+    a {
+        display:block;
+
+        small {
+            text-decoration:none;
+            color:#333;
+        }
+
+        &:hover {
+            small {
+                text-decoration:none;
+                color:#333;
+            }
+        }
+    }
+}
+
+.blogPosts {
+    a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+}

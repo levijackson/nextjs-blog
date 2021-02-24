@@ -1,0 +1,41 @@
+{
+  "name": "nextjs-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "test": "jest",
+    "export": "next export"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "date-fns": "^2.16.1",
+    "fs": "0.0.1-security",
+    "globby": "^11.0.1",
+    "gray-matter": "^4.0.2",
+    "next": "^10.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "regenerator-runtime": "^0.13.7",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
+    "sass": "^1.30.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.17.0",
+    "eslint-config-get-off-my-lawn": "^5.0.1",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1"
+  }
+}
