@@ -32,7 +32,8 @@ h1,h2,h3,h4,h5,h6 {
 .grid {
   display: grid;
   /* each value is a column */
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 10% auto 10%;
+  /* header, content, footer height */
   grid-template-rows:12% auto 10%;
   width: 100vw;
   height: 100vh;
@@ -48,7 +49,7 @@ header, footer {
 
 @media all and (max-width: 700px) {
   .content {
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
   }
 }
 
@@ -63,16 +64,16 @@ footer {
 }
 
 header {
-    display: flex;
     background:$bdazzled-blue;
+    display: grid;
+    grid-template-columns: 12% auto 30%;
+    grid-column-gap: 1%;
 
     .site-info {
-      flex:1 1;
       font-size:1.2em;
+      margin-left:2em;
     }
     .navigation {
-      flex:2 1;
-
       a {
         padding:.5rem .9rem;
 
@@ -99,15 +100,13 @@ header {
     }
 
     @media all and (max-width: $mobile-cutoff) {
-        flex-direction: column;
-        align-items:flex-start;
+        grid-template-columns: 100%;
         padding-bottom:1em;
 
         .site-info,
         .navigation,
         .search {
             margin:0.5em 0;
-            flex:1;
             width:100%;
         }
 
@@ -121,12 +120,16 @@ header {
     display: grid;
     grid-template-columns: 50% 40%;
     grid-gap:10%;
-    grid-column:1/4;
+    grid-column:2/3;
+    grid-column-gap: 1%;
+    margin-bottom:4em;
+
+    img {
+      max-width:100%;
+    }
 
     @media all and (max-width: $mobile-cutoff) {
-        & {
-            display:block;
-        }
+      grid-column:1/2;
 
         article,
         aside {
@@ -136,11 +139,13 @@ header {
 }
 
 footer {
-    display: flex;
     line-height:35px;
     background:$bdazzled-blue;
     padding:6px 15px;
     color:$eggshell;
+    display: grid;
+    grid-template-columns: 12% auto;
+    grid-column-gap: 1%;
 
     a {
         width:30px;
@@ -161,21 +166,42 @@ footer {
     small {
         font-size:10px;
     }
-    .name {
-      flex:20%;
-    }
     .contact {
-      flex:80%;
       text-align:right;
     }
     @media all and (max-width: $mobile-cutoff) {
       & {
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .name,
-      .contact {
-        flex:100%;
+        grid-template-columns: 50% 50%;
       }
     }
+}
+
+.post_content img {
+    display:block;
+    margin:10px 0;
+    border:2px solid #ccc;
+}
+.post_content ol {
+    padding-left:20px;
+}
+.post_content pre div {
+    border-radius:4px;
+}
+.post_content code {
+    background:#eee;
+    border-radius:4px;
+    padding:2px;
+}
+.post_content h2 {
+  margin-top:2em;
+  margin-bottom:0;
+}
+.post_content h3 {
+  margin-top:1.5em;
+  margin-bottom:0;
+  color:#33673B;
+}
+.post_content h3 + p,
+.post_content h2 + p {
+    margin-top:0;
 }

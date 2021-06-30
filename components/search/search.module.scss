@@ -2,8 +2,7 @@ $burnt-sienna: #cf5e42;
 $mobile-cutoff:700px;
 
 .search {
-    flex:2 1;
-    text-align:right;
+    margin-right:2em;
 
     form {
         input[type="text"] {
@@ -43,6 +42,7 @@ $mobile-cutoff:700px;
 
         li {
             list-style-type: none;
+            padding:10px 0;
         }
     }
 }
@@ -50,7 +50,7 @@ $mobile-cutoff:700px;
 @media (max-width: $mobile-cutoff) {
     .search {
         display:block;
-        width:100%;
+        width:50%;
 
         input[type="text"] {
             display:block;
