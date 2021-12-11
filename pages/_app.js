@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import * as analytics from '../components/analytics'
 import '../styles/global.scss'
 
-export default ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }) => {
     const router = useRouter();
 
     useEffect(() => {
@@ -20,4 +20,6 @@ export default ({ Component, pageProps }) => {
     }, [router.events]);
 
     return <Component {...pageProps} />
-}  
+}
+
+export default App;
